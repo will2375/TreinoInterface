@@ -1,23 +1,15 @@
 package ChamarAnimais;
 
 import Mamifero.MamiferoMarinho.Baleia;
+import Mamifero.MamiferoMarinho.Focas;
 import Mamifero.MamiferoTerrestre.Cachorro;
 
 public class ChamarMamiferos {
     public static void main(String[] args) {
-        System.out.println("Açoes Baleia");
-        Baleia baleia = new Baleia();
-        baleia.Habitacao();
-        baleia.sonar();
-        baleia.locomocao();
-        baleia.mamar();
-        System.out.println("");
+        Focas focas = new Focas();
+        focas.exibir();
 
-        System.out.println("Açoes Cachorro");
-        Cachorro cachorro= new Cachorro();
-        cachorro.qtdPatas();
-        cachorro.locomocao();
-        cachorro.Habitacao();
-        cachorro.mamar();
+        Cachorro cachorro = new Cachorro();
+        cachorro.exibir();
     }
 }

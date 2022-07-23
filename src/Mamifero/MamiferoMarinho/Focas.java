@@ -1,30 +1,42 @@
 package Mamifero.MamiferoMarinho;
 
-import ChamarAnimais.Interfaces.MamiferoMarinho;
-import ChamarAnimais.Interfaces.Mamiferos;
+import Aves.interfaces.Alimentação;
+import Aves.interfaces.Habitação;
+import Aves.interfaces.MamiferoMarinho;
+import Aves.interfaces.Mamiferos;
 
-public class Focas implements Mamiferos, MamiferoMarinho {
+public class Focas implements Mamiferos, MamiferoMarinho, Alimentação, Habitação {
     @Override
     public String sonar() {
-        System.out.println("Possui sonar");
-        return null;
+        return "Possui sonar";
     }
 
     @Override
     public String mamar() {
-        System.out.println("Mama");
-        return null;
+        return "animal mama";
     }
 
     @Override
     public String locomocao() {
-        System.out.println("Nadar");
-        return null;
+        return "locomoçao a nado";
     }
 
     @Override
-    public String Habitacao() {
-        System.out.println("Mar aberto");
-        return null;
+    public String alimento() {
+        return "Se alimenta com peixes";
+    }
+
+    @Override
+    public String habitacao() {
+        return "Habitaçao terrestre";
+    }
+
+    public void exibir(){
+        System.out.println("Dados foca:");
+        System.out.println(habitacao());
+        System.out.println(alimento());
+        System.out.println(locomocao());
+        System.out.println(mamar());
+        System.out.println(sonar());
     }
 }
